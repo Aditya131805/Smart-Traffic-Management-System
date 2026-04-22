@@ -1,0 +1,27 @@
+<routes>
+    <vType id="car"        length="4.5" maxSpeed="13.89" guiShape="passenger"/>
+    <vType id="motorcycle" length="2.0" maxSpeed="16.00" guiShape="motorcycle"/>
+    <vType id="bus"        length="9.0" maxSpeed="10.00" guiShape="bus"/>
+    <vType id="truck"      length="7.5" maxSpeed="11.00" guiShape="truck"/>
+
+    <route id="north_south" edges="north_in south_out"/>
+    <route id="south_north" edges="south_in north_out"/>
+    <route id="east_west"   edges="east_in  west_out"/>
+    <route id="west_east"   edges="west_in  east_out"/>
+
+    <flow id="north_cars"  route="north_south" type="car"        begin="0" end="3600" vehsPerHour="300" departSpeed="max"/>
+    <flow id="north_bikes" route="north_south" type="motorcycle" begin="0" end="3600" vehsPerHour="100" departSpeed="max"/>
+    <flow id="north_buses" route="north_south" type="bus"        begin="0" end="3600" vehsPerHour="40"  departSpeed="max"/>
+
+    <flow id="south_cars"  route="south_north" type="car"        begin="0" end="3600" vehsPerHour="280" departSpeed="max"/>
+    <flow id="south_bikes" route="south_north" type="motorcycle" begin="0" end="3600" vehsPerHour="90"  departSpeed="max"/>
+    <flow id="south_buses" route="south_north" type="bus"        begin="0" end="3600" vehsPerHour="35"  departSpeed="max"/>
+
+    <flow id="east_cars"   route="east_west"   type="car"        begin="0" end="3600" vehsPerHour="260" departSpeed="max"/>
+    <flow id="east_bikes"  route="east_west"   type="motorcycle" begin="0" end="3600" vehsPerHour="85"  departSpeed="max"/>
+    <flow id="east_trucks" route="east_west"   type="truck"      begin="0" end="3600" vehsPerHour="30"  departSpeed="max"/>
+
+    <flow id="west_cars"   route="west_east"   type="car"        begin="0" end="3600" vehsPerHour="240" departSpeed="max"/>
+    <flow id="west_bikes"  route="west_east"   type="motorcycle" begin="0" end="3600" vehsPerHour="80"  departSpeed="max"/>
+    <flow id="west_buses"  route="west_east"   type="bus"        begin="0" end="3600" vehsPerHour="30"  departSpeed="max"/>
+</routes>

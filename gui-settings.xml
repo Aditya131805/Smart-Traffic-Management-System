@@ -1,0 +1,34 @@
+<viewsettings>
+    <!-- Real world theme -->
+    <scheme name="real_world">
+        <background backgroundColor="87,114,56" showGrid="0"/>
+        
+        <!-- Roads -->
+        <edges laneEdgeMode="0" scaleSize="1">
+            <colorScheme name="uniform">
+                <entry color="70,70,70"/>
+            </colorScheme>
+        </edges>
+
+        <!-- Vehicles -->
+        <vehicles vehicleMode="0" vehicleQuality="2" showBlinker="1">
+            <colorScheme name="given/assigned vehicle color">
+                <entry color="255,255,0" name="car"/>
+                <entry color="255,0,0"   name="bus"/>
+                <entry color="0,150,255" name="motorcycle"/>
+                <entry color="200,100,0" name="truck"/>
+            </colorScheme>
+        </vehicles>
+
+        <!-- Junction/intersection -->
+        <!-- ✅ Keep junction black -->
+            <junctions drawShape="1" drawCrossingsAndWalkingAreas="1">
+            <colorScheme name="uniform">
+            <entry color="30,30,30"/>
+        </colorScheme>
+    </junctions>
+    </scheme>
+
+    <!-- ✅ Zoom in on center intersection -->
+    <viewport x="499.80" y="500.36" zoom="500"/>
+</viewsettings>
